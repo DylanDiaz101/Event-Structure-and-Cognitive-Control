@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// USAGE:
+// 1. Add to player gameobject.
+// 2. Add footsteps audiosource to the field in the inspector.
+
 public class Footsteps : MonoBehaviour
 {
     public AudioSource footstepsSound;
