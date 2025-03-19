@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private float xRotation = 0f;
 
+    // Flag to control player movement
+    public bool isMovementEnabled = true;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -35,7 +38,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         HandleMouseLook();
-        HandleMovement();
+
+        // Only handle movement if movement is enabled
+        if (isMovementEnabled)
+        {
+            HandleMovement();
+            HandleMouseLook();
+        }
     }
 
     void HandleMouseLook()
