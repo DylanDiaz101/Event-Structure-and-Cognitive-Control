@@ -39,6 +39,7 @@ public class PreloadHiddenObjects : MonoBehaviour
 
         // Disable player movement and camera rotation
         playerController.isMovementEnabled = false;
+        playerController.isCameraRotationEnabled = false;
 
         // Disable footsteps
         footsteps.enabled = false;
@@ -115,14 +116,14 @@ public class PreloadHiddenObjects : MonoBehaviour
             Debug.Log("Loading screen disabled.");
         }
 
-        // Re-enable player movement and camera rotation
+        // Re-enable player movement, camera rotation, and footsteps
         if (playerController != null)
         {
             playerController.isMovementEnabled = true;
+            playerController.isCameraRotationEnabled = true;
             Debug.Log("Player movement and camera rotation re-enabled.");
         }
 
-        // Re-enable footsteps
         if (footsteps != null)
         {
             footsteps.enabled = true;

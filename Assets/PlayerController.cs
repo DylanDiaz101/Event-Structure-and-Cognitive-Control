@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// USAGE:
+// 1. Add script to player object
+// 2. Adjust movement speed and sensitivity as needed
+
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
@@ -17,8 +21,9 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private float xRotation = 0f;
 
-    // Flag to control player movement
+    // Flags to control player movement and camera rotation
     public bool isMovementEnabled = true;
+    public bool isCameraRotationEnabled = true;
 
     void Start()
     {
@@ -37,13 +42,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        HandleMouseLook();
+        // Only handle camera rotation if it is enabled
+        if (isCameraRotationEnabled)
+        {
+            HandleMouseLook();
+        }
 
         // Only handle movement if movement is enabled
         if (isMovementEnabled)
         {
             HandleMovement();
-            HandleMouseLook();
         }
     }
 
