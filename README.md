@@ -24,6 +24,7 @@ C:\Users\yourName\AppData\LocalLow\DefaultCompany\Event-Structure-and-Cognitive-
 ## Notes
 - Ensure you have appropriate permissions to access the data folder.
 - The VR environment is still a **Work in Progress (WIP)** and uses Unity version 2022.3.6f1.
+- Packages added: TextMeshPro 3.0.9, Post Processing 3.2.2
 
 ---
 
