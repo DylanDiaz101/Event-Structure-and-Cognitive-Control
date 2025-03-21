@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// DESCRIPTION:
+// Unhides and then rehides objects when the game first starts to have them loaded into memory (so as to prevent future frame lag).
+
 // USAGE:
 // 1. Add preload script to empty game object in the scene hierarchy.
 // 2. Assign loading screen to the field in the component Inspector.

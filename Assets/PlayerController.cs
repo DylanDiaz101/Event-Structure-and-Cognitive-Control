@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// DESCRIPTION:
+// Script for playermovement (WASD) and player camera rotation (with mouse)
+
 // USAGE:
 // 1. Add script to player object
 // 2. Adjust movement speed and sensitivity as needed

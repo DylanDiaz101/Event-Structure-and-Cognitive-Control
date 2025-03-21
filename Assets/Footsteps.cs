@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// DESCRIPTION:
+// Plays footsteps audio whenever player pushes WASD
+
 // USAGE:
 // 1. Add to player gameobject.
 // 2. Add footsteps audiosource to the field in the inspector.

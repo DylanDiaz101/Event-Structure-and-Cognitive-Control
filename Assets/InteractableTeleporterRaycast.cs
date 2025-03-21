@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// DESCRIPTION:
+// When placed on gameobject, player can interact with object which is highlighted and push a key ('E') to be teleported to a specified target gameobject.
+
 // USAGE: 
 // 1. Attach the Script: Attach this script to the GameObject you want the player to interact with.
 // 2. Set the Target Position: Assign an empty GameObject (or any GameObject) to the targetPosition field in the Inspector. This will be the location the player is teleported to.
