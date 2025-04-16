@@ -13,6 +13,7 @@ using System;
 
 public class Trial
 {
+    public int TrialNumber;
     public string Condition;
     public char Cue;
     public char Probe;
@@ -111,6 +112,13 @@ public class TrialGenerator : MonoBehaviour
             {
                 Debug.LogError("Unknown trial condition encountered: " + trial.Condition);
             }
+
+            // After Cue/Probe assignment, assign trial numbers:
+            for (int i = 0; i < trials.Count; i++)
+            {
+                trials[i].TrialNumber = i + 1;  // 1-based indexing
+            }
+
         }
 
         return trials;
@@ -127,7 +135,10 @@ public class TrialGenerator : MonoBehaviour
         // Debug output to verify your trial generation. Remove or comment out for production.
         foreach (Trial trial in trialList)
         {
-            Debug.Log($"Room: {trial.Condition}, Cue: {trial.Cue}, Probe: {trial.Probe}");
+            Debug.Log($"TrialNum: {trial.TrialNumber}, Room: {trial.Condition}, Cue: {trial.Cue}, Probe: {trial.Probe}");
         }
+
+        Debug.Log($"List: {trialList}");
     }
+
 }
