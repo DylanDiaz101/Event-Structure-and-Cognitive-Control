@@ -25,7 +25,7 @@ public class PreloadHiddenObjects : MonoBehaviour
     private void Start()
     {
         // Find the PlayerController script
-        playerController = FindObjectOfType<PlayerController>();
+        playerController = FindAnyObjectByType<PlayerController>();
         if (playerController == null)
         {
             Debug.LogError("PlayerController not found in the scene!");
@@ -33,7 +33,7 @@ public class PreloadHiddenObjects : MonoBehaviour
         }
 
         // Find the Footsteps script
-        footsteps = FindObjectOfType<Footsteps>();
+        footsteps = FindAnyObjectByType<Footsteps>();
         if (footsteps == null)
         {
             Debug.LogError("Footsteps script not found in the scene!");
